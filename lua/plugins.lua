@@ -25,5 +25,8 @@ require("lazy").setup({
   {
     'hoob3rt/lualine.nvim' -- Statusline
   },
+  {
+    'neovim/nvim-lspconfig' -- LSP
+  }
 }, opts)
 
