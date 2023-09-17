@@ -16,7 +16,15 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup plugins
 require("lazy").setup({
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",             name = "catppuccin", priority = 1000 },
+  { 'kyazdani42/nvim-web-devicons' }, -- File icons
+  {
+    'nvimdev/lspsaga.nvim',           -- LSP UIs
+    config = function() require('lspsaga').setup({}) end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- optional
+    }
+  },
   { 'L3MON4D3/LuaSnip' },  -- Snippet
   {
     'hoob3rt/lualine.nvim' -- Statusline
@@ -40,5 +48,8 @@ require("lazy").setup({
   { 'windwp/nvim-autopairs' },
   { 'windwp/nvim-ts-autotag' },
   { 'nvim-telescope/telescope.nvim',             dependencies = { 'nvim-lua/plenary.nvim' } },
-  { 'nvim-telescope/telescope-file-browser.nvim' }
+  { 'nvim-telescope/telescope-file-browser.nvim' },
+  { 'akinsho/nvim-bufferline.lua' },
+  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'MunifTanjim/prettier.nvim' }
 }, opts)
