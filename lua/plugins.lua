@@ -51,5 +51,14 @@ require("lazy").setup({
   { 'nvim-telescope/telescope-file-browser.nvim' },
   { 'akinsho/nvim-bufferline.lua' },
   { 'jose-elias-alvarez/null-ls.nvim' },
-  { 'MunifTanjim/prettier.nvim' }
+  { 'MunifTanjim/prettier.nvim' },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
 }, opts)
