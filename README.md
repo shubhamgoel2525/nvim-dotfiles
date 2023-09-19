@@ -1,6 +1,6 @@
 # dotfiles for neovim
 
-While these files are agnostic to any programming language, however, this setup is mainly geared towards web development and JS/TS dev. Feel free to extend it for your preferred programming language.
+While these files are agnostic to the programming language, however, this setup is mainly geared towards web development and JS/TS dev. Feel free to extend it for your preferred programming language.
 
 This setup builds on top of [this setup](https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb).
 
@@ -14,7 +14,6 @@ This setup builds on top of [this setup](https://dev.to/craftzdog/my-neovim-setu
 - Neovim
 - A terminal that supports nerd fonts (e.g. Windows terminal with powershell and oh-my-posh)
 - An installed Nerd font
-- ripgrep is also required for fuzzy-finding through telescope
 
 ## Note on theme (catppuccin)<a name="note-on-theme" />
 The colorscheme for the code will be applied automatically, however, the terminal has to be customised on your own.

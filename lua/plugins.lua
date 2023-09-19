@@ -17,14 +17,22 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup plugins
 require("lazy").setup({
   { "catppuccin/nvim",             name = "catppuccin", priority = 1000 },
-  { 'kyazdani42/nvim-web-devicons' }, -- File icons
   {
-    'nvimdev/lspsaga.nvim',           -- LSP UIs
-    config = function() require('lspsaga').setup({}) end,
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
     dependencies = {
-      'nvim-treesitter/nvim-treesitter', -- optional
-    }
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    },
   },
+  { 'kyazdani42/nvim-web-devicons' }, -- File icons
   { 'L3MON4D3/LuaSnip' },  -- Snippet
   {
     'hoob3rt/lualine.nvim' -- Statusline
