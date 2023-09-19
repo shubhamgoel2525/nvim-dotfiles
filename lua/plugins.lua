@@ -52,6 +52,7 @@ require("lazy").setup({
   { 'akinsho/nvim-bufferline.lua' },
   { 'jose-elias-alvarez/null-ls.nvim' },
   { 'MunifTanjim/prettier.nvim' },
+  { 'HiPhish/rainbow-delimiters.nvim' },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

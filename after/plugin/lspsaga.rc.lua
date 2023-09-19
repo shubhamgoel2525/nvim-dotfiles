@@ -1,7 +1,10 @@
 local lspsaga = require 'lspsaga'
 
 lspsaga.setup {
-  server_filetype_map = {}
+  server_filetype_map = {},
+  ui = {
+    kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+  }
 }
 
 local opts = { noremap = true, silent = true }

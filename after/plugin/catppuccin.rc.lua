@@ -12,7 +12,7 @@ require("catppuccin").setup({
     shade = "dark",
     percentage = 0.15,            -- percentage of the shade to apply to the inactive window
   },
-  no_italic = true,               -- Force no italic
+  no_italic = false,               -- Force no italic
   no_bold = false,                -- Force no bold
   no_underline = false,           -- Force no underline
   styles = {                      -- Handles the styles of general hi groups (see `:h highlight-args`):
@@ -38,25 +38,30 @@ require("catppuccin").setup({
     treesitter = true,
     notify = false,
     mini = false,
-    -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-    native_lsp = {
-      enabled = true,
-      virtual_text = {
-        errors = { "italic" },
-        hints = { "italic" },
-        warnings = { "italic" },
-        information = { "italic" },
-      },
-      underlines = {
-        errors = { "underline" },
-        hints = { "underline" },
-        warnings = { "underline" },
-        information = { "underline" },
-      },
-      inlay_hints = {
-        background = true,
-      },
+    lsp_saga = true,
+    rainbow_delimiters = true,
+    telescope = {
+      enabled = true
     },
+    -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+--    native_lsp = {
+--      enabled = true,
+--      virtual_text = {
+--        errors = { "italic" },
+--        hints = { "italic" },
+--        warnings = { "italic" },
+--        information = { "italic" },
+--      },
+--      underlines = {
+--        errors = { "underline" },
+--        hints = { "underline" },
+--        warnings = { "underline" },
+--        information = { "underline" },
+--      },
+--      inlay_hints = {
+--        background = true,
+--      },
+--    },
   },
 })
 
